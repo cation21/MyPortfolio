@@ -356,7 +356,7 @@ const PAGE_MARKUP = {
             </ul>
           </div>
           <div class="card reveal">
-            <h3 class="card__h">Things I think about</h3>
+            <h3 class="card__h">Other interests</h3>
             <ul class="interests">${c.interests.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
           </div>
         </div>

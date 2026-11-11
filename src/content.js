@@ -215,9 +215,11 @@ export const content = {
     { name: 'Hindi', level: 'Native', value: 1 },
     { name: 'Telugu', level: 'Native', value: 1 },
     { name: 'English', level: 'Full professional', value: 0.95 },
+    { name: 'Spanish', level: 'Intermediate', value: 0.55 },
+    { name: 'German', level: 'Learning', value: 0.2 },
   ],
 
-  interests: ['EEG and brain signals', 'Computational neuroscience', 'Robot perception', 'Trustworthy AI', 'Debate'],
+  interests: ['Public speaking', 'Social work', 'Drama and theatre'],
 
   // images live in public/gallery/
   gallery: [
