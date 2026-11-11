@@ -21,6 +21,9 @@ export const content = {
     'I am now working on understanding the attention mechanism in the brain and its applications in BCI. I am also interested in trustworthy AI, and have worked on sovereign intelligence architectures and decentralised systems.',
   ],
 
+  // school, shown as a short line under the degrees on the Education page
+  school: 'Before university: Class XII (Maths, Physics, Chemistry) at NRI Junior College, Board of Intermediate Education, Andhra Pradesh, in 2021, with 96.7%; and Class X at Siddartha High School, Srikakulam, Board of Secondary Education, Andhra Pradesh, in 2019, with a perfect GPA of 10.0.',
+
   education: [
     {
       when: '2022 ♪ 2026',

@@ -407,6 +407,7 @@ const PAGE_MARKUP = {
         <div class="section__glow" aria-hidden="true"></div>
         ${sectionHead('where it started', 'Education', 2)}
         ${tracklist(c.education)}
+        ${c.school ? `<p class="school reveal">${esc(c.school)}</p>` : ''}
       </section>
 
 `,
