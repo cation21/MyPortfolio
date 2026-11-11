@@ -60,7 +60,7 @@ async function readFeed() {
 const blogFeed = () => ({
   name: 'blog-feed',
   configureServer(server) {
-    server.middlewares.use('/blog.json', async (_req, res) => {
+    server.middlewares.use(`${server.config.base}blog.json`, async (_req, res) => {
       res.setHeader('content-type', 'application/json');
       res.end(JSON.stringify(await readFeed()));
     });
@@ -73,6 +73,8 @@ const blogFeed = () => ({
 });
 
 export default defineConfig({
+  // GitHub Pages serves this repo at /MyPortfolio/; set BASE=/ for a host at the domain root
+  base: process.env.BASE || '/MyPortfolio/',
   build: { chunkSizeWarningLimit: 1200 },
   plugins: [pageFolders(), blogFeed()],
 });

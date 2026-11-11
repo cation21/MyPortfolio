@@ -9,10 +9,10 @@ export const content = {
   links: {
     linkedin: 'https://www.linkedin.com/in/ananya-pandey-782962250',
     github: 'https://github.com/cation21',
-    cv: '/cv.pdf', // drop your CV at public/cv.pdf
+    cv: `${import.meta.env.BASE_URL}cv.pdf`, // drop your CV at public/cv.pdf
     substack: 'https://annexplorer.substack.com', // the Blog page lists its latest posts
   },
-  photo: '/me.jpg', // drop a photo at public/me.jpg; it gets the duotone treatment automatically
+  photo: `${import.meta.env.BASE_URL}me.jpg`, // drop a photo at public/me.jpg; it gets the duotone treatment automatically
 
   about: [
     "I'm Ananya, and I'm intrigued by attention: the mechanism in the brain, and the one in computers. I'm a computer science graduate working as an Associate AI Engineer on weekdays, and doing independent neuroscience research when my nocturnal side takes over. I'm pivoting to brain–computer interfaces.",

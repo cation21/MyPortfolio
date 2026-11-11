@@ -441,7 +441,7 @@ const PAGE_MARKUP = {
               (g, i) => `
             <figure class="gallery__item reveal" data-kind="${esc(g.kind)}">
               <button class="gallery__open" data-i="${i}" aria-label="Open ${esc(g.title)}">
-                <img src="/gallery/${g.src}" alt="${esc(g.title)}: ${esc(g.note)}" loading="lazy" decoding="async" />
+                <img src="${import.meta.env.BASE_URL}gallery/${g.src}" alt="${esc(g.title)}: ${esc(g.note)}" loading="lazy" decoding="async" />
               </button>
               <figcaption><strong>${esc(g.title)}</strong><span>${esc(g.note)}</span></figcaption>
             </figure>`

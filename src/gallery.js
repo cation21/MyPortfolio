@@ -26,7 +26,7 @@ export function initGallery(root, items) {
   const show = (i) => {
     cur = i;
     const g = items[i];
-    img.src = `/gallery/${g.src}`;
+    img.src = `${import.meta.env.BASE_URL}gallery/${g.src}`;
     img.alt = `${g.title}: ${g.note}`;
     cap.innerHTML = '';
     const t = document.createElement('strong'); t.textContent = g.title;
