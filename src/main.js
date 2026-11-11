@@ -29,7 +29,7 @@ renderSite(content);
 // pages are loaded on demand: built the first time they're opened, with any code they need fetched then
 const PAGE_SETUP = {
   projects: async (el) => (await import('./gallery.js')).initGallery(el.querySelector('#gallery'), content.gallery),
-  brain: async (el) => (await import('./facts-tv.js')).initMiniTV(el.querySelector('.mini-tv'), content.facts),
+  extras: async (el) => (await import('./facts-tv.js')).initMiniTV(el.querySelector('.mini-tv'), content.facts),
   blog: async (el) => (await import('./blog.js')).initBlog(el),
 };
 const router = createRouter({

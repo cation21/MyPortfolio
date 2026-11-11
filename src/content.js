@@ -15,10 +15,10 @@ export const content = {
   photo: `${import.meta.env.BASE_URL}me.png`, // a 64px pixel-art portrait in the album palette; shown with hard pixel edges
 
   about: [
-    "I'm Ananya, and I'm intrigued by attention: the mechanism in the brain, and the one in computers. I'm a computer science graduate working as an Associate AI Engineer on weekdays, and doing independent neuroscience research when my nocturnal side takes over. I'm pivoting to brain–computer interfaces.",
+    "I'm Ananya, and I'm intrigued by attention: the mechanism in the brain, and the one in computers. I'm a computer science graduate working as an Associate AI Engineer on weekdays, and doing independent neuroscience research when my nocturnal side takes over. Now I'm bringing the two together: I'm pivoting to brain–computer interfaces.",
     'At Quadratyx I work on contrastive learning models and an AI guardrails API. Before that I was a Data Scientist Trainee, where I built mutual fund recommendation and credit card fraud detection models.',
-    'I have always been keen about Neuroscience and have used my technical skills in analyzing EEG and fMRI datasets. I re-analysed recordings from 94 meditators to pull apart periodic and aperiodic gamma activity, and presented it as a poster at Cutting Gardens 2026, IIT Mandi.',
-    'I am now working on understanding attention mechanism in the brain and its applications in BCI. I am also interested in trustworthy AI, and have worked on sovereign intelligence architectures and decentralised systems.',
+    'I have always been keen on neuroscience and have used my technical skills to analyse EEG and fMRI datasets. I re-analysed recordings from 94 meditators to pull apart periodic and aperiodic gamma activity, and presented it as a poster at Cutting Gardens 2026, IIT Mandi.',
+    'I am now working on understanding the attention mechanism in the brain and its applications in BCI. I am also interested in trustworthy AI, and have worked on sovereign intelligence architectures and decentralised systems.',
   ],
 
   education: [
@@ -39,18 +39,6 @@ export const content = {
       points: [
         'Courses: Indian Short Fiction, Postcolonial Literature, African-American Writing, Women’s Writing in the Nineteenth and Twentieth Centuries, and American Literature.',
       ],
-    },
-    {
-      when: '2019 ♪ 2021',
-      title: 'Intermediate (Class XII): Maths, Physics, Chemistry',
-      org: 'NRI Junior College · Board of Intermediate Education, Andhra Pradesh',
-      points: ['967 / 1000 (96.7%), Grade A. Full marks in Mathematics A and B, and in the Physics and Chemistry practicals.'],
-    },
-    {
-      when: '2019',
-      title: 'Secondary School Certificate (Class X)',
-      org: 'Siddartha High School, Srikakulam · Board of Secondary Education, Andhra Pradesh',
-      points: ['GPA 10.0 / 10, with the top grade (A1) in every subject.'],
     },
   ],
 
@@ -157,16 +145,16 @@ export const content = {
 
   publications: [
     {
+      tag: 'Poster · Cutting Gardens 2026, IIT Mandi',
+      title: 'Periodic and aperiodic components of meditation gamma',
+      note: 'A true 60–110 Hz gamma peak appeared in only 21 of 340 blocks (6%): the meditation gamma effect is mostly a broadband (aperiodic) shift, not an oscillation.',
+      link: 'https://github.com/cation21/Gamma',
+    },
+    {
       tag: 'IEEE ICNWC 2026',
       title: 'Robust Robot Localization and Mapping in Challenging Spaces via Thermal-LiDAR Fusion',
       note: 'First author · oral presentation · 12.5% acceptance',
       link: 'https://ieeexplore.ieee.org/document/11517933',
-    },
-    {
-      tag: 'Poster · Cutting Gardens 2026, IIT Mandi',
-      title: 'Periodic and aperiodic components of meditation gamma',
-      note: '64-channel EEG, 94 participants, 341 recordings',
-      link: 'https://github.com/cation21/Gamma',
     },
   ],
 
@@ -175,7 +163,7 @@ export const content = {
       title: 'Meditation gamma',
       motif: 'waves',
       color: 'wine',
-      blurb: 'Open, unit-tested Python pipeline (MNE, ICA with ICLabel, specparam, IRASA) re-analysing EEG from 94 meditators, with mixed-effects models and a 48-specification multiverse analysis.',
+      blurb: 'A true 60–110 Hz gamma peak appeared in only 21 of 340 blocks (6%): the meditation gamma effect is mostly a broadband (aperiodic) shift, not an oscillation. An open, unit-tested Python pipeline (MNE, ICA with ICLabel, specparam, IRASA) re-analysing EEG from 94 participants.',
       tags: ['EEG', 'MNE', 'Statistics'],
       link: 'https://github.com/cation21/Gamma',
     },
@@ -188,11 +176,11 @@ export const content = {
       link: 'https://ieeexplore.ieee.org/document/11517933',
     },
     {
-      title: 'Brain MRI CNN',
+      title: 'AttentionFeedback',
       motif: 'grid',
       color: 'blush',
-      blurb: 'Convolutional network that detects brain tumours in MRI scans, with a custom Dataset/DataLoader pipeline for normalisation, augmentation and batching.',
-      tags: ['PyTorch', 'CNN', 'OpenCV'],
+      blurb: 'Coming soon.',
+      tags: ['Attention', 'BCI', 'Coming soon'],
     },
     {
       title: 'The Property Doctors',
@@ -234,24 +222,12 @@ export const content = {
   // images live in public/gallery/
   gallery: [
     { src: 'icnwc-2026.jpg', title: 'ICNWC 2026', note: 'Paper presentation · SRM Institute, with IEEE Madras Section', kind: 'Research' },
-    { src: 'isdd-2026-bits-pilani.jpg', title: 'ISDD 2026', note: 'Delegate · International Seminar on Digital Dreamscapes, BITS Pilani', kind: 'Research' },
+    { src: 'cutting-gardens-2026-poster.jpg', title: 'Cutting Gardens 2026', note: 'Poster · meditation gamma, IIT Mandi', kind: 'Research' },
     { src: 'wstem-2022-paper.jpg', title: 'WSTEM 2022', note: 'Paper presentation · Women and Careers in STEM', kind: 'Research' },
-    { src: 'wstem-2022.jpg', title: 'WSTEM 2022', note: 'Certificate of appreciation · DST-PURSE', kind: 'Research' },
     { src: 'scholarship-2022.jpg', title: 'Ashok K Chauhan Scholarship', note: '100% merit scholarship · 2022–23', kind: 'Honours' },
     { src: 'scholarship-2023.jpg', title: 'Ashok K Chauhan Scholarship', note: '100% merit scholarship · 2023–24', kind: 'Honours' },
-    { src: 'scinovation-2023-debate.jpg', title: 'Scinovation 2023', note: 'First place · debate competition', kind: 'Honours' },
-    { src: 'ecell-esummit-2022.jpg', title: 'E-Summit 2022', note: 'First place, World Café · Amity Innovation Incubator', kind: 'Honours' },
-    { src: 'nss-speech-2023.jpg', title: 'Rajasthan Mission 2030', note: 'First place · NSS speech competition', kind: 'Honours' },
-    { src: 'renaissance-2024-adaa.jpg', title: 'Renaissance 2024', note: 'Prize winner, Adaa · JECRC', kind: 'Honours' },
     { src: 'avasa-general-secretary.jpg', title: 'Avasa Foundation', note: 'General Secretary · 2024–2026', kind: 'Leadership' },
-    { src: 'avasa-vice-president.jpg', title: 'Avasa Foundation', note: 'Vice-President · 2023–2024', kind: 'Leadership' },
     { src: 'nss-national-integration-camp-2023.jpg', title: 'NSS National Integration Camp', note: 'Mullana, Haryana · February 2023', kind: 'Leadership' },
-    { src: 'nss-special-camp-2026.jpg', title: 'NSS Special Camp', note: 'Amity University Rajasthan · January 2026', kind: 'Leadership' },
-    { src: 'tribal-youth-exchange-2026.jpg', title: '17th Tribal Youth Exchange', note: 'MY Bharat, Jaipur · January 2026', kind: 'Leadership' },
-    { src: 'national-youth-festival-2024.jpg', title: '27th National Youth Festival', note: 'Youth Convention · 2024', kind: 'Leadership' },
-    { src: 'military-training-camp-2025.jpg', title: 'Green Horns Military Training Camp', note: 'Amity · March 2025', kind: 'Leadership' },
-    { src: 'scinovation-2023-volunteer.jpg', title: 'Scinovation 2023', note: 'Volunteer', kind: 'Leadership' },
-    { src: 'odyssey-2023.jpg', title: 'Odyssey 2023', note: 'Certificate of appreciation · techno-cultural fest', kind: 'Leadership' },
   ],
 
   facts: [

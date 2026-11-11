@@ -26,13 +26,12 @@ export const PAGES = [
   { slug: 'research', side: 'A', nav: 'Research', title: 'Research', label: 'in the lab, and in print' },
   { slug: 'education', side: 'A', nav: 'Education', title: 'Education', label: 'where it started' },
   { slug: 'projects', side: 'B', nav: 'Projects', title: 'Projects', label: 'things i built, freelance and the scrapbook' },
-  { slug: 'brain', side: 'B', nav: 'Brain', title: 'Brain facts', label: 'who really cares (i do)' },
-  { slug: 'quotes', side: 'B', nav: 'Quotes', title: 'Quotes', label: 'words on repeat' },
+  { slug: 'extras', side: 'B', nav: 'Extras', title: 'Extras', label: 'brain facts and words on repeat' },
   { slug: 'blog', side: 'B', nav: 'Blog', title: 'Blog', label: 'notes from the night shift' },
   { slug: 'contact', side: 'B', nav: 'Contact', title: 'Contact', label: "i'd love to hear from you" },
 ];
 // old addresses that now live inside another page
-export const ALIASES = { papers: 'research', gallery: 'projects' };
+export const ALIASES = { papers: 'research', gallery: 'projects', brain: 'extras', quotes: 'extras' };
 const BASE = import.meta.env.BASE_URL; // '/' unless the site is served from a sub-folder
 export const pagePath = (slug) => (slug === 'home' ? BASE : `${BASE}${slug}/`);
 
@@ -154,8 +153,7 @@ export const trackCount = (slug, c) => ({
   research: `${plural(c.research.length, 'position')} ♪ ${plural(c.publications.length, 'paper')}`,
   education: plural(c.education.length, 'qualification'),
   projects: `${plural(c.projects.filter((p) => !p.freelance).length, 'project')} ♪ ${plural(c.projects.filter((p) => p.freelance).length, 'freelance site')} ♪ ${plural(c.gallery.length, 'photo')}`,
-  brain: plural(c.facts.length, 'fact'),
-  quotes: plural(c.quotes.length, 'quote'),
+  extras: `${plural(c.facts.length, 'brain fact')} ♪ ${plural(c.quotes.length, 'quote')}`,
   blog: 'essays on substack',
   contact: 'say hello',
 }[slug] || '');
@@ -303,9 +301,8 @@ export function renderSite(c) {
 
     <div class="page" data-page="projects" hidden></div>
 
-    <div class="page" data-page="brain" hidden></div>
 
-    <div class="page" data-page="quotes" hidden></div>
+    <div class="page" data-page="extras" hidden></div>
 
     <div class="page" data-page="blog" hidden></div>
 
@@ -423,7 +420,7 @@ const PAGE_MARKUP = {
 
       <section id="freelance" class="section section--wide">
         <div class="section__glow" aria-hidden="true"></div>
-        ${sectionHead('websites for clients', 'Freelance', 2)}
+        ${sectionHead('client work with nozel, my web studio', 'Freelance', 2)}
         ${records(c.projects.filter((p) => p.freelance))}
       </section>
 
@@ -457,7 +454,7 @@ const PAGE_MARKUP = {
       </section>
 `,
 
-  brain: (c) => `
+  extras: (c) => `
       <section id="brain" class="section">
         <div class="section__glow" aria-hidden="true"></div>
         ${sectionHead('who really cares (i do)', 'Brain facts', 1)}
@@ -478,9 +475,7 @@ const PAGE_MARKUP = {
           </div>
         </div>
       </section>
-`,
 
-  quotes: (c) => `
       <section id="quotes" class="section">
         <div class="section__glow" aria-hidden="true"></div>
         ${sectionHead('words on repeat', 'Quotes', 2)}

@@ -9,7 +9,7 @@ const slugs = () =>
   [...readFileSync(resolve(root, 'src/render.js'), 'utf8').matchAll(/\{ slug: '([a-z0-9-]+)'/g)]
     .map((m) => m[1])
     .filter((s) => s !== 'home')
-    .concat(['papers', 'gallery']); // old addresses, now inside Research and Projects (see ALIASES)
+    .concat(['papers', 'gallery', 'brain', 'quotes']); // old addresses, now inside other pages (see ALIASES)
 
 // The site is one app with a page per section (/about/, /work/ ...).
 // After building, copy index.html into a folder per page so every URL loads
