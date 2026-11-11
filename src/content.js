@@ -114,7 +114,7 @@ export const content = {
     },
     {
       when: 'Oct ♪ Nov 2025',
-      title: 'Chief Research Officer',
+      title: 'Research Volunteer',
       org: 'Aligned Sovereign Intelligence Institute (Aligned Institute)',
       points: [
         "Led the Institute's research and technical strategy, overseeing interdisciplinary teams on sovereign intelligence architectures and decentralised systems.",
