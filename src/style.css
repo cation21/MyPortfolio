@@ -14,7 +14,7 @@
   --peach-rgb: 255 179 138;  --peach: rgb(var(--peach-rgb));
   --cobalt-rgb: 47 67 255;   --cobalt: rgb(var(--cobalt-rgb));   /* the album's blue: a faint glow high in the sky only */
   --cream-rgb: 255 242 248;  --cream: rgb(var(--cream-rgb));
-  --muted: rgb(var(--cream-rgb) / 0.66);
+  --muted: rgb(var(--cream-rgb) / 0.8); /* secondary text: bright enough to read in long sections like Work */
   --line: rgb(var(--cream-rgb) / 0.12);
   --glass: rgb(var(--night-rgb) / 0.7);
 
@@ -46,7 +46,7 @@ button { font: inherit; color: inherit; }
 /* the night (night.js) sits behind everything, with a gentle scanline texture over it (but under the content) */
 #night { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 0; display: block; pointer-events: none; }
 .scanlines { position: fixed; inset: 0; z-index: 1; pointer-events: none;
-  background: repeating-linear-gradient(0deg, rgb(0 0 0 / 0.18) 0 1px, transparent 1px 3px), linear-gradient(180deg, transparent 30%, rgb(var(--blush-rgb) / 0.035) 45%, transparent 60%); }
+  background: repeating-linear-gradient(0deg, rgb(0 0 0 / 0.12) 0 1px, transparent 1px 3px), linear-gradient(180deg, transparent 30%, rgb(var(--blush-rgb) / 0.035) 45%, transparent 60%); }
 #app { position: relative; z-index: 2; }
 
 
