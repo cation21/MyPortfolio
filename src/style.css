@@ -655,15 +655,15 @@ body:not([data-page="home"]) .footer { padding-bottom: 110px; }
 @media (max-width: 860px) { .setlist__sides { grid-template-columns: minmax(0, 1fr); gap: 40px; } }
 .setlist__list { list-style: none; margin: 0; padding: 0; }
 .setlist__item a {
-  display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 2px 18px;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 3px 18px; /* title, label, count stacked; play on the right */
   padding: 18px 4px; border-bottom: 1px solid var(--line); text-decoration: none;
   transition: padding-left 0.4s cubic-bezier(.2,.8,.2,1), background 0.3s;
 }
 .setlist__title { font-family: var(--f-display); font-size: clamp(22px, 2.2vw, 32px); line-height: 1.1; color: var(--cream); }
-.setlist__label { grid-column: 1; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-.setlist__count { grid-column: 2; grid-row: 1 / span 2; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.setlist__label { grid-column: 1; grid-row: 2; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.setlist__count { grid-column: 1; grid-row: 3; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(var(--blush-rgb) / 0.75); }
 .setlist__play {
-  grid-column: 3; grid-row: 1 / span 2; width: 40px; height: 40px; border-radius: 50%;
+  grid-column: 2; grid-row: 1 / span 3; width: 40px; height: 40px; border-radius: 50%;
   display: grid; place-items: center; border: 1px solid var(--line); color: var(--cream); transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
 }
 .setlist__play svg { width: 14px; height: 14px; fill: currentColor; margin-left: 2px; }
@@ -671,5 +671,4 @@ body:not([data-page="home"]) .footer { padding-bottom: 110px; }
 .setlist__item a:hover .setlist__play, .setlist__item a:focus-visible .setlist__play { background: var(--pink); color: var(--ink); border-color: var(--pink); transform: scale(1.08); }
 .setlist__item a:hover .setlist__title { color: #fff; }
 .setlist__item a:focus-visible { outline: 2px solid var(--blush); outline-offset: -2px; }
-@media (max-width: 520px) { .setlist__count { display: none; } .setlist__item a { grid-template-columns: minmax(0, 1fr) auto; } .setlist__play { grid-column: 2; } }
 

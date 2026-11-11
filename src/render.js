@@ -25,7 +25,7 @@ export const PAGES = [
   { slug: 'work', side: 'A', nav: 'Work', title: 'Work', label: "where i've worked, and served" },
   { slug: 'research', side: 'A', nav: 'Research', title: 'Research', label: 'in the lab, and in print' },
   { slug: 'education', side: 'A', nav: 'Education', title: 'Education', label: 'where it started' },
-  { slug: 'projects', side: 'B', nav: 'Projects', title: 'Projects', label: 'things i built, freelance and the scrapbook' },
+  { slug: 'projects', side: 'B', nav: 'Projects', title: 'Projects', label: 'things i built' },
   { slug: 'extras', side: 'B', nav: 'Extras', title: 'Extras', label: 'brain facts and words on repeat' },
   { slug: 'blog', side: 'B', nav: 'Blog', title: 'Blog', label: 'notes from the night shift' },
   { slug: 'contact', side: 'B', nav: 'Contact', title: 'Contact', label: "i'd love to hear from you" },
