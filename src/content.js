@@ -171,6 +171,14 @@ export const content = {
       link: 'https://github.com/cation21/Gamma',
     },
     {
+      title: 'Contemplative Neuroscience',
+      motif: 'nodes',
+      color: 'peach',
+      blurb: 'Fine-tuning a small language model on 3,568 meditation-neuroscience papers raised recall@1 on held-out abstracts from 0.76 to 0.89. An open evidence map of 83 verified papers, datasets and tools, with a paper finder whose 23 MB model runs entirely in the browser, so searches never leave the device.',
+      tags: ['Contrastive learning', 'ONNX', 'Knowledge base'],
+      link: 'https://github.com/cation21/contemplative-neuroscience',
+    },
+    {
       title: 'Thermal-LiDAR SLAM',
       motif: 'lidar',
       color: 'pink',
